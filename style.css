@@ -1,0 +1,158 @@
+/* Algemene stijlen voor de body */
+body {
+    font-family: Arial, sans-serif; /* Lettertype */
+    margin: 0; /* Geen rand rondom de pagina */
+    padding: 0; /* Geen ruimte binnen de pagina */
+    background-color: hsl(120, 62%, 91%); /* Achtergrondkleur */
+    color: hsl(0, 0%, 3%); /* Tekstkleur */
+    display: flex; /* Flexbox-layout */
+    flex-direction: column; /* Elementen verticaal uitlijnen */
+    min-height: 100vh; /* Pagina vult minstens het scherm */
+}
+
+/* Header styling */
+header {
+    background-color: hsl(126, 89%, 14%);
+    color: hsl(0, 0%, 100%);
+    display: flex; /* Flexbox-layout */
+    flex-direction: column; /* Elementen verticaal stapelen */
+    align-items: center; /* Horizontaal centreren */
+    padding: 32px 20px; /* Binnenruimte rondom inhoud */
+    text-align: center; /* Tekst centreren */
+}
+
+header a img {
+    height: 75px; /* Hoogte van de afbeelding */
+    width: auto; /* Breedte blijft proportioneel */
+    position: absolute; /* Plaatsing onafhankelijk van andere elementen */
+    top: 5px; /* Afstand vanaf de bovenkant */
+    left: 5px; /* Afstand vanaf de linkerkant */
+}
+
+header h1 {
+    font-size: 1.8em; /* Lettergrootte */
+    margin: 1em; /* Ruimte rondom de koptekst */
+    color: hsl(0, 0%, 100%);
+}
+
+header nav ul {
+    list-style: none; /* Verwijder opsommingstekens */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox-layout */
+    gap: 60px; /* Ruimte tussen menu-items */
+}
+
+header nav ul li a {
+    text-decoration: none; /* Geen onderstreping */
+    color: hsl(0, 0%, 100%);
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 10px; /* Binnenruimte rondom tekst */
+    border-radius: 5px; /* Afgeronde hoeken */
+    transition: background-color 0.3s ease; /* Kleur verandert soepel */
+}
+
+header nav ul li a:hover {
+    background-color: hsl(0, 0%, 40%); /* Kleur bij hover */
+}
+
+/* Artikel stijl */
+article {
+    display: flex; /* Flexbox-layout */
+    align-items: center; /* Verticaal uitlijnen */
+    justify-content: center; /* Horizontaal centreren */
+    margin: 30px auto; /* Ruimte rondom en centreren */
+    padding: 1px; /* Binnenruimte rondom inhoud */
+    background-color: hsl(120, 50%, 99%); /* Achtergrondkleur */
+    border-radius: 8px; /* Afgeronde hoeken */
+    width: 100%; /* Volledige breedte */
+    max-width: 800px; /* Maximale breedte */
+}
+
+article figure img {
+    width: 200px; /* Breedte van de afbeelding */
+    height: 200px; /* Hoogte van de afbeelding */
+    object-fit: cover; /* Vul ruimte zonder vervorming */
+}
+
+article section {
+    flex: 1; /* Gebruik resterende ruimte */
+    text-align: left; /* Tekst links uitlijnen */
+    padding: 10px; /* Binnenruimte rondom tekst */
+    margin: 0;
+}
+
+article p {
+    font-size: 16px; /* Tekstgrootte */
+    line-height: 1.6; /* Ruimte tussen regels */
+    color: hsl(0, 100%, 2%); /* Tekstkleur */
+    margin: 0; /* Geen ruimte rondom de paragrafen */
+}
+
+/* Responsiviteit: kleinere schermen */
+@media (max-width: 768px) {
+    article {
+        flex-direction: column; /* Elementen stapelen */
+        align-items: flex-start; /* Links uitlijnen */
+        width: 90%; /* Maak artikel breder op kleine schermen */
+    }
+    article figure {
+        margin-bottom: 15px; /* Ruimte onder afbeelding */
+    }
+}
+
+/* Footer styling */
+footer {
+    background-color: hsl(126, 89%, 14%);
+    color: #e8eff2;
+    text-align: center; /* Tekst centreren */
+    padding: 10px 0; /* Binnenruimte rondom tekst */
+    font-size: 0.9em; /* Kleiner lettertype */
+    border-top: 3px solid #f6f2f2; /* Rand bovenaan */
+    margin-top: auto; /* Plaats onderaan de pagina */
+}
+
+footer section {
+    margin-bottom: 10px; /* Ruimte tussen secties */
+}
+
+footer ul {
+    list-style: none; /* Verwijder opsommingstekens */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Lijst centreren */
+}
+
+footer ul li {
+    display: inline-block; /* Lijst-items naast elkaar */
+    margin: 0 10px; /* Ruimte tussen items */
+}
+
+footer a {
+    color: #f3f6f3;
+    text-decoration: none;
+    font-weight: bold; /* Vetgedrukte tekst */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Onderstreping bij hover */
+}
+
+footer address {
+    font-style: normal; /* Gewone stijl */
+    line-height: 1.6; /* Ruimte tussen regels */
+    margin-top: 5px; /* Ruimte boven adres */
+}
+
+/* Responsiviteit: footer op mobiele apparaten */
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.8em; /* Kleiner lettertype */
+        padding: 8px 0; /* Minder ruimte rondom tekst */
+    }
+    footer ul li {
+        display: block; /* Lijst-items onder elkaar */
+        margin: 5px 0; /* Ruimte tussen items */
+    }
+}
